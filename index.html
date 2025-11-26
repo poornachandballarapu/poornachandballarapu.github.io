@@ -5,37 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Poorna Chand Ballarapu | Official Portfolio</title>
     <style>
+        /* --- GLOBAL STYLES --- */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f9fa;
+            background-color: #ffffff;
             color: #333;
+            line-height: 1.8; /* More space between lines for readability */
         }
 
-        /* --- THE HEADER SECTION (Where your Title lives) --- */
+        /* --- HEADER SECTION --- */
         header {
-            background-color: #1a252f; /* Very Dark Blue */
+            background-color: #1a252f;
             color: #ffffff;
-            padding: 60px 20px; /* Big spacing to make it stand out */
+            padding: 80px 20px;
             text-align: center;
         }
 
-        /* This controls your Name */
         h1.site-title {
-            font-size: 3.5rem; /* Very Large Text */
+            font-size: 3.5rem;
             margin: 0;
             font-weight: 700;
-            letter-spacing: 2px; /* Slight spacing between letters */
-            text-transform: uppercase; /* Makes it look like a logo */
+            letter-spacing: 3px;
+            text-transform: uppercase;
         }
 
-        /* This controls the sub-text */
         p.site-tagline {
-            font-size: 1.2rem;
-            color: #bdc3c7; /* Light grey for contrast */
-            margin-top: 10px;
-            font-weight: 300;
+            font-size: 1.1rem;
+            color: #bdc3c7;
+            margin-top: 15px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
         /* --- NAVIGATION --- */
@@ -43,71 +45,123 @@
             background: #2c3e50;
             text-align: center;
             padding: 15px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         nav a {
-            color: white;
+            color: #ecf0f1;
             text-decoration: none;
-            margin: 0 20px;
-            font-size: 1.1rem;
-            font-weight: bold;
+            margin: 0 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
         }
         nav a:hover {
-            text-decoration: underline;
+            color: #e74c3c; /* Subtle red hover effect */
         }
 
-        /* --- CONTENT --- */
+        /* --- MAIN CONTAINER --- */
         .container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 0 20px;
+            max-width: 800px; /* Narrower width for better reading experience */
+            margin: 60px auto;
+            padding: 0 30px;
         }
-        h2 {
-            border-bottom: 3px solid #2c3e50;
-            padding-bottom: 10px;
-            margin-top: 40px;
+
+        /* --- RAVISHING ABOUT SECTION --- */
+        .intro-section {
+            text-align: left;
+            margin-bottom: 60px;
         }
-        .project-placeholder {
-            background: white;
-            padding: 20px;
-            border: 1px solid #ddd;
+        
+        .intro-heading {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #e74c3c; /* Accent Color */
+            font-weight: bold;
             margin-bottom: 20px;
-            border-left: 5px solid #e74c3c; /* Red accent */
+            display: block;
         }
+
+        .intro-text {
+            /* Using a Serif font here makes it look like a Legal Brief or Journal */
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-size: 1.35rem; 
+            color: #2c3e50;
+            font-weight: 500;
+            margin-bottom: 30px;
+        }
+
+        .intro-detail {
+            color: #555;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        /* --- DIVIDER --- */
+        hr.elegant {
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+            margin: 50px 0;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: #f9f9f9;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+        }
+        footer a { color: #2c3e50; text-decoration: none; font-weight: bold; }
     </style>
 </head>
 <body>
 
     <header>
         <h1 class="site-title">Poorna Chand Ballarapu</h1>
-        <p class="site-tagline">Law (NALSAR) &bull; Data Science (IIT Madras) &bull; Anthropology</p>
+        <p class="site-tagline">Law &bull; Data Science &bull; Anthropology</p>
     </header>
 
     <nav>
-        <a href="#">About</a>
-        <a href="#">Projects</a>
-        <a href="#">CV</a>
-        <a href="#">Contact</a>
+        <a href="#">Profile</a>
+        <a href="#">Focus Areas</a>
+        <a href="https://linkedin.com">Contact</a>
     </nav>
 
     <div class="container">
         
-        <h2>About Me</h2>
-        <p>
-            Welcome to my digital portfolio. I am a multidisciplinary researcher and student working at the intersection of 
-            <strong>Legal frameworks and Data Science</strong>. (This is a preview layout).
-        </p>
+        <div class="intro-section">
+            <span class="intro-heading">Professional Profile</span>
+            
+            <p class="intro-text">
+                I operate at the convergence of legal strategy, quantitative analysis, and human behavior. By synthesizing the rigor of a NALSAR legal education with the analytical precision of Data Science at IIT Madras, I do not just interpret the law—I analyze the systems that shape it.
+            </p>
 
-        <h2>Selected Projects</h2>
-        <div class="project-placeholder">
-            <h3>[Project Title Will Go Here]</h3>
-            <p>Description of the project...</p>
+            <p class="intro-detail">
+                In an era defined by algorithmic complexity and global financial shifts, the modern lawyer must be fluent in both code and statute. My background bridges this divide.
+            </p>
+
+            <p class="intro-detail">
+                With a foundation in <strong>Anthropology (M.A.)</strong> and <strong>Statistics (B.S.)</strong>, I bring a unique, multidimensional perspective to Corporate Law, Mergers & Acquisitions, and the regulation of emerging technologies.
+            </p>
         </div>
-        <div class="project-placeholder">
-            <h3>[Project Title Will Go Here]</h3>
-            <p>Description of the project...</p>
+
+        <hr class="elegant">
+
+        <div style="text-align: center; color: #7f8c8d;">
+            <p><em>Full case studies and research portfolio forthcoming.</em></p>
         </div>
 
     </div>
+
+    <footer>
+        <p>&copy; 2025 Poorna Chand Ballarapu. <br> Hyderabad, India.</p>
+        <p>Connect on <a href="https://linkedin.com">LinkedIn</a></p>
+    </footer>
 
 </body>
 </html>
