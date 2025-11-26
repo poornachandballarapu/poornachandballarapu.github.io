@@ -3,108 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poorna Chand Ballarapu | Initializing...</title>
+    <title>Poorna Chand Ballarapu | System Loading...</title>
     <style>
-        /* --- ANIMATED BACKGROUND --- */
+        /* --- CORE SETTINGS --- */
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', sans-serif;
+            background-color: #050505; /* True Black */
+            font-family: 'Courier New', Courier, monospace; /* Code Font */
+            color: #00ffcc; /* Cyber Cyan */
             height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* --- THE MOVING GRID BACKGROUND --- */
+        .grid-bg {
+            position: absolute;
+            top: 0; left: 0; width: 200%; height: 200%;
+            background-image: 
+                linear-gradient(rgba(0, 255, 204, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 204, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px; /* Grid square size */
+            transform: perspective(500px) rotateX(60deg) translateY(-100px) translateZ(-200px);
+            animation: moveGrid 20s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes moveGrid {
+            0% { transform: perspective(500px) rotateX(60deg) translateY(0) translateZ(-200px); }
+            100% { transform: perspective(500px) rotateX(60deg) translateY(1000px) translateZ(-200px); }
+        }
+
+        /* --- THE MAIN CONTAINER --- */
+        .terminal-window {
             text-align: center;
-            color: white;
-            /* Deep Tech Gradient: Purple, Dark Blue, Cyan */
-            background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #00d2ff);
-            background-size: 400% 400%;
-            animation: gradientBG 15s ease infinite;
+            z-index: 10;
+            padding: 20px;
         }
 
-        /* Makes the background colors shift slowly */
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        /* --- GLASSMORPHISM CARD (The "Tech" Box) --- */
-        .glass-container {
-            background: rgba(255, 255, 255, 0.1); /* See-through white */
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-            backdrop-filter: blur(8px); /* The "Frosted Glass" blur */
-            -webkit-backdrop-filter: blur(8px);
-            border-radius: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            padding: 50px;
-            max-width: 600px;
-            width: 90%;
-        }
-
-        /* --- TYPOGRAPHY --- */
+        /* --- GLITCH NAME EFFECT --- */
         h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            font-weight: 700;
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 3rem;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: 5px;
+            color: white;
+            position: relative;
+            margin-bottom: 5px;
+            text-shadow: 0 0 10px rgba(0, 255, 204, 0.7);
         }
 
-        /* The "Code" Font Tagline */
-        .tagline {
-            font-family: 'Courier New', Courier, monospace; /* Coding font */
-            color: #00d2ff; /* Neon Cyan */
-            font-size: 1.1rem;
-            margin-bottom: 30px;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-
-        .description {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            color: #e0e0e0;
+        /* The Subtitle */
+        .identity {
+            font-size: 1rem;
+            color: #888;
             margin-bottom: 40px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .highlight { color: #00ffcc; font-weight: bold; }
+
+        /* --- THE "LOADING" BAR --- */
+        .loader-container {
+            width: 300px;
+            height: 4px;
+            background: #222;
+            margin: 0 auto 20px auto;
+            position: relative;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .loader-bar {
+            width: 100%;
+            height: 100%;
+            background: #00ffcc;
+            position: absolute;
+            left: -100%;
+            animation: load 3s ease-in-out infinite;
+            box-shadow: 0 0 10px #00ffcc;
+        }
+
+        @keyframes load {
+            0% { left: -100%; }
+            50% { left: 0%; }
+            100% { left: 100%; }
+        }
+
+        .status-text {
+            font-size: 0.8rem;
+            color: #00ffcc;
+            animation: blink 1.5s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
         }
 
         /* --- BUTTON --- */
         .btn {
-            background: transparent;
-            color: white;
+            margin-top: 50px;
+            display: inline-block;
+            border: 1px solid #333;
+            color: #888;
+            padding: 10px 25px;
             text-decoration: none;
-            padding: 12px 30px;
-            border: 2px solid #00d2ff;
-            border-radius: 30px;
-            font-weight: bold;
-            text-transform: uppercase;
+            font-size: 0.8rem;
             letter-spacing: 1px;
-            transition: all 0.3s ease;
+            transition: all 0.3s;
+        }
+        .btn:hover {
+            border-color: #00ffcc;
+            color: #00ffcc;
+            box-shadow: 0 0 15px rgba(0, 255, 204, 0.2);
         }
 
-        .btn:hover {
-            background: #00d2ff;
-            color: #0f0c29;
-            box-shadow: 0 0 15px #00d2ff; /* Neon Glow on hover */
-        }
     </style>
 </head>
 <body>
 
-    <div class="glass-container">
-        <h1>Poorna Chand Ballarapu</h1>
-        
-        <p class="tagline">&lt; Law / Data / Systems &gt;</p>
+    <div class="grid-bg"></div>
 
-        <p class="description">
-            Architecting the intersection of Legal Strategy and Data Science.<br>
-            Preparing new digital frameworks.
-        </p>
-        
-        <br>
-        
-        <a href="https://linkedin.com" class="btn">Connect via LinkedIn</a>
+    <div class="terminal-window">
+        <h1>Poorna Chand Ballarapu</h1>
+        <div class="identity">
+            Law <span class="highlight">::</span> Data Science <span class="highlight">::</span> Anthropology
+        </div>
+
+        <div class="loader-container">
+            <div class="loader-bar"></div>
+        </div>
+        <div class="status-text">
+            SYSTEM STATUS: DEPLOYMENT IMMINENT<br>
+            [ INTEGRATING MODULES ]
+        </div>
+
+        <a href="https://linkedin.com" class="btn">ESTABLISH CONNECTION</a>
     </div>
 
 </body>
