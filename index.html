@@ -3,134 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poorna Chand Ballarapu | Law & Data Science</title>
+    <title>Poorna Chand Ballarapu | Official Portfolio</title>
     <style>
-        /* CSS: This controls how the site looks */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f8f9fa;
+            color: #333;
         }
+
+        /* --- THE HEADER SECTION (Where your Title lives) --- */
         header {
-            background: #2c3e50; /* Dark Blue Professional Color */
-            color: #fff;
-            padding: 1rem 0;
+            background-color: #1a252f; /* Very Dark Blue */
+            color: #ffffff;
+            padding: 60px 20px; /* Big spacing to make it stand out */
             text-align: center;
         }
-        nav ul {
-            padding: 0;
-            list-style: none;
+
+        /* This controls your Name */
+        h1.site-title {
+            font-size: 3.5rem; /* Very Large Text */
+            margin: 0;
+            font-weight: 700;
+            letter-spacing: 2px; /* Slight spacing between letters */
+            text-transform: uppercase; /* Makes it look like a logo */
+        }
+
+        /* This controls the sub-text */
+        p.site-tagline {
+            font-size: 1.2rem;
+            color: #bdc3c7; /* Light grey for contrast */
+            margin-top: 10px;
+            font-weight: 300;
+        }
+
+        /* --- NAVIGATION --- */
+        nav {
+            background: #2c3e50;
             text-align: center;
+            padding: 15px 0;
         }
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: #fff;
+        nav a {
+            color: white;
             text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.1rem;
             font-weight: bold;
         }
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- CONTENT --- */
         .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        h2 {
+            border-bottom: 3px solid #2c3e50;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        .project-placeholder {
+            background: white;
             padding: 20px;
-            background: #fff;
-            margin-top: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1, h2 {
-            color: #2c3e50;
-        }
-        .bio-section {
-            padding: 20px 0;
-            border-bottom: 1px solid #eee;
-        }
-        .project-card {
-            background: #f9f9f9;
-            padding: 15px;
-            margin-bottom: 15px;
-            border-left: 5px solid #2c3e50;
-        }
-        .btn {
-            display: inline-block;
-            background: #2c3e50;
-            color: #fff;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-        .btn:hover {
-            background: #34495e;
-        }
-        footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            margin-top: 20px;
-            font-size: 0.8rem;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            border-left: 5px solid #e74c3c; /* Red accent */
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Poorna Chand Ballarapu</h1>
-        <p>B.A. LL.B (Hons.) | B.S. Data Science | M.A. Anthropology</p>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <h1 class="site-title">Poorna Chand Ballarapu</h1>
+        <p class="site-tagline">Law (NALSAR) &bull; Data Science (IIT Madras) &bull; Anthropology</p>
     </header>
 
-    <div class="container" id="about">
-        <h2>About Me</h2>
-        <div class="bio-section">
-            <p>I am a multidisciplinary professional bridging the gap between <strong>Law, Technology, and Finance</strong>.</p> 
-            <p>Currently, I am a 3rd-year Law student at <strong>NALSAR University</strong> and a Data Science student at <strong>IIT Madras</strong>. My background includes a Master's in Anthropology from <strong>University of Hyderabad</strong>.</p>
-            <p>My goal is to specialize in <strong>Tech Law, M&A, and Financial Regulation</strong>, using data-driven insights to solve complex legal challenges in the global market.</p>
-        </div>
-    </div>
+    <nav>
+        <a href="#">About</a>
+        <a href="#">Projects</a>
+        <a href="#">CV</a>
+        <a href="#">Contact</a>
+    </nav>
 
-    <div class="container" id="projects">
-        <h2>Key Projects</h2>
+    <div class="container">
         
-        <div class="project-card">
-            <h3>🏛️ Corporate Data Analytics (Telangana RoC)</h3>
-            <p>Analyzed "Registrars of Companies" master data to identify trends in corporate registrations in Telangana. Used Python for data cleaning and statistical analysis.</p>
+        <h2>About Me</h2>
+        <p>
+            Welcome to my digital portfolio. I am a multidisciplinary researcher and student working at the intersection of 
+            <strong>Legal frameworks and Data Science</strong>. (This is a preview layout).
+        </p>
+
+        <h2>Selected Projects</h2>
+        <div class="project-placeholder">
+            <h3>[Project Title Will Go Here]</h3>
+            <p>Description of the project...</p>
+        </div>
+        <div class="project-placeholder">
+            <h3>[Project Title Will Go Here]</h3>
+            <p>Description of the project...</p>
         </div>
 
-        <div class="project-card">
-            <h3>⚖️ Bharatiya Sakshya Adhiniyam & Digital Evidence</h3>
-            <p>Researching the intersection of Indian evidence law and modern technology, specifically focusing on the admissibility of electronic records under the new 2023 Act.</p>
-        </div>
-
-        <div class="project-card">
-            <h3>💻 Legal Tech & APIs</h3>
-            <p>Experimenting with REST APIs to automate legal data retrieval. Currently building tools to interface with legal databases using Python and Postman.</p>
-        </div>
     </div>
-
-    <div class="container" id="contact">
-        <h2>Get in Touch</h2>
-        <p>I am open to internships and research opportunities in Tech Law and Finance.</p>
-        <a href="mailto:your-email@example.com" class="btn">Email Me</a>
-        <br><br>
-        <p>Find me on <a href="https://linkedin.com">LinkedIn</a></p>
-    </div>
-
-    <footer>
-        <p>&copy; 2025 Poorna Chand Ballarapu. Hosted on GitHub Pages.</p>
-    </footer>
 
 </body>
 </html>
