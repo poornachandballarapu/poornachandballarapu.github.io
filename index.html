@@ -3,165 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poorna Chand Ballarapu | Official Portfolio</title>
+    <title>Poorna Chand Ballarapu | Initializing...</title>
     <style>
-        /* --- GLOBAL STYLES --- */
+        /* --- ANIMATED BACKGROUND --- */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #ffffff;
-            color: #333;
-            line-height: 1.8; /* More space between lines for readability */
-        }
-
-        /* --- HEADER SECTION --- */
-        header {
-            background-color: #1a252f;
-            color: #ffffff;
-            padding: 80px 20px;
+            font-family: 'Segoe UI', sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-align: center;
+            color: white;
+            /* Deep Tech Gradient: Purple, Dark Blue, Cyan */
+            background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #00d2ff);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
         }
 
-        h1.site-title {
-            font-size: 3.5rem;
-            margin: 0;
+        /* Makes the background colors shift slowly */
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* --- GLASSMORPHISM CARD (The "Tech" Box) --- */
+        .glass-container {
+            background: rgba(255, 255, 255, 0.1); /* See-through white */
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(8px); /* The "Frosted Glass" blur */
+            -webkit-backdrop-filter: blur(8px);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            padding: 50px;
+            max-width: 600px;
+            width: 90%;
+        }
+
+        /* --- TYPOGRAPHY --- */
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
             font-weight: 700;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-        }
-
-        p.site-tagline {
-            font-size: 1.1rem;
-            color: #bdc3c7;
-            margin-top: 15px;
-            font-weight: 400;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        /* --- NAVIGATION --- */
-        nav {
-            background: #2c3e50;
-            text-align: center;
-            padding: 15px 0;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        nav a {
-            color: #ecf0f1;
-            text-decoration: none;
-            margin: 0 25px;
-            font-size: 1rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #e74c3c; /* Subtle red hover effect */
-        }
-
-        /* --- MAIN CONTAINER --- */
-        .container {
-            max-width: 800px; /* Narrower width for better reading experience */
-            margin: 60px auto;
-            padding: 0 30px;
-        }
-
-        /* --- RAVISHING ABOUT SECTION --- */
-        .intro-section {
-            text-align: left;
-            margin-bottom: 60px;
-        }
-        
-        .intro-heading {
-            font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: #e74c3c; /* Accent Color */
-            font-weight: bold;
-            margin-bottom: 20px;
-            display: block;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
-        .intro-text {
-            /* Using a Serif font here makes it look like a Legal Brief or Journal */
-            font-family: 'Georgia', 'Times New Roman', serif;
-            font-size: 1.35rem; 
-            color: #2c3e50;
-            font-weight: 500;
-            margin-bottom: 30px;
-        }
-
-        .intro-detail {
-            color: #555;
+        /* The "Code" Font Tagline */
+        .tagline {
+            font-family: 'Courier New', Courier, monospace; /* Coding font */
+            color: #00d2ff; /* Neon Cyan */
             font-size: 1.1rem;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            font-weight: bold;
+            letter-spacing: 1px;
         }
 
-        /* --- DIVIDER --- */
-        hr.elegant {
-            border: 0;
-            height: 1px;
-            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
-            margin: 50px 0;
+        .description {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #e0e0e0;
+            margin-bottom: 40px;
         }
 
-        /* --- FOOTER --- */
-        footer {
-            text-align: center;
-            padding: 40px;
-            background: #f9f9f9;
-            color: #7f8c8d;
-            font-size: 0.9rem;
-            border-top: 1px solid #eee;
+        /* --- BUTTON --- */
+        .btn {
+            background: transparent;
+            color: white;
+            text-decoration: none;
+            padding: 12px 30px;
+            border: 2px solid #00d2ff;
+            border-radius: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
         }
-        footer a { color: #2c3e50; text-decoration: none; font-weight: bold; }
+
+        .btn:hover {
+            background: #00d2ff;
+            color: #0f0c29;
+            box-shadow: 0 0 15px #00d2ff; /* Neon Glow on hover */
+        }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1 class="site-title">Poorna Chand Ballarapu</h1>
-        <p class="site-tagline">Law &bull; Data Science &bull; Anthropology</p>
-    </header>
-
-    <nav>
-        <a href="#">Profile</a>
-        <a href="#">Focus Areas</a>
-        <a href="https://linkedin.com">Contact</a>
-    </nav>
-
-    <div class="container">
+    <div class="glass-container">
+        <h1>Poorna Chand Ballarapu</h1>
         
-        <div class="intro-section">
-            <span class="intro-heading">Professional Profile</span>
-            
-            <p class="intro-text">
-                I operate at the convergence of legal strategy, quantitative analysis, and human behavior. By synthesizing the rigor of a NALSAR legal education with the analytical precision of Data Science at IIT Madras, I do not just interpret the law—I analyze the systems that shape it.
-            </p>
+        <p class="tagline">&lt; Law / Data / Systems &gt;</p>
 
-            <p class="intro-detail">
-                In an era defined by algorithmic complexity and global financial shifts, the modern lawyer must be fluent in both code and statute. My background bridges this divide.
-            </p>
-
-            <p class="intro-detail">
-                With a foundation in <strong>Anthropology (M.A.)</strong> and <strong>Statistics (B.S.)</strong>, I bring a unique, multidimensional perspective to Corporate Law, Mergers & Acquisitions, and the regulation of emerging technologies.
-            </p>
-        </div>
-
-        <hr class="elegant">
-
-        <div style="text-align: center; color: #7f8c8d;">
-            <p><em>Full case studies and research portfolio forthcoming.</em></p>
-        </div>
-
+        <p class="description">
+            Architecting the intersection of Legal Strategy and Data Science.<br>
+            Preparing new digital frameworks.
+        </p>
+        
+        <br>
+        
+        <a href="https://linkedin.com" class="btn">Connect via LinkedIn</a>
     </div>
-
-    <footer>
-        <p>&copy; 2025 Poorna Chand Ballarapu. <br> Hyderabad, India.</p>
-        <p>Connect on <a href="https://linkedin.com">LinkedIn</a></p>
-    </footer>
 
 </body>
 </html>
